@@ -20,19 +20,19 @@
     >
       <a-assets>
         <a-asset-item
-          id="arma1"
+          id="arbol"
           src="https://cdn.glitch.global/e86e63d8-8174-48c7-8e85-4ceb3609981e/christmas_tree.glb?v=1702533388454"
         ></a-asset-item>
         <a-asset-item
-          id="arma2"
+          id="regalos"
           src="https://cdn.glitch.global/e86e63d8-8174-48c7-8e85-4ceb3609981e/regalos_navidad__christmas_gifts.glb?v=1702533389582"
         ></a-asset-item>
         <a-asset-item
-          id="arma3"
+          id="bota"
           src="https://cdn.glitch.global/e86e63d8-8174-48c7-8e85-4ceb3609981e/christmas_sock.glb?v=1702533393909"
         ></a-asset-item>
         <a-asset-item
-          id="arma4"
+          id="dulce"
           src="https://cdn.glitch.global/e86e63d8-8174-48c7-8e85-4ceb3609981e/candy_cane_prop.glb?v=1702533535725"
         ></a-asset-item>
         <audio id="sound1" src="MP7.mp3" preload="auto"></audio>
@@ -47,8 +47,8 @@
         raycaster="objects: .clickable"
       >
         <a-entity
-          gltf-model="#arma1"
-          scale="1 1 1"
+          gltf-model="#arbol"
+          scale="2 2 2"
           rotation="90 270 90"
           position="0 0 0"
           class="clickable"
@@ -64,8 +64,8 @@
         raycaster="objects: .clickable"
       >
         <a-entity
-          gltf-model="#arma2"
-          scale="0.01 0.01 0.01"
+          gltf-model="#regalos"
+          scale="5 5 5"
           rotation="270 270 90"
           position="0 0 0"
           class="clickable"
@@ -81,9 +81,9 @@
         raycaster="objects: .clickable"
       >
         <a-entity
-          gltf-model="#arma3"
-          scale="0.7 0.7 0.7"
-          rotation="90 270 90"
+          gltf-model="#bota"
+          scale="2 2 2"
+          rotation="0 270 90"
           position=""
           class="clickable"
           gesture-handler
@@ -94,14 +94,14 @@
       <a-marker
         id="mk4"
         type="barcode"
-        value="20"
+        value="50"
         raycaster="objects: .clickable"
       >
         <a-entity
-          gltf-model="#arma3"
-          scale="0.7 0.7 0.7"
+          gltf-model="#dulce"
+          scale="0.008 0.008 0.008"
           rotation="90 270 90"
-          position=""
+          position="0 -5 1"
           class="clickable"
           gesture-handler
           soundhandler
