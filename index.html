@@ -35,10 +35,10 @@
           id="dulce"
           src="https://cdn.glitch.global/e86e63d8-8174-48c7-8e85-4ceb3609981e/candy_cane_prop.glb?v=1702533535725"
         ></a-asset-item>
-        <audio id="sound1" src="MP7.mp3" preload="auto"></audio>
-        <audio id="sound2" src="UMP45.mp3" preload="auto"></audio>
-        <audio id="sound3" src="MX.mp3" preload="auto"></audio>
-        <audio id="sound4" src="MX.mp3" preload="auto"></audio>
+        <audio id="sound1" src="1.mp3" preload="auto"></audio>
+        <audio id="sound2" src="1.mp3" preload="auto"></audio>
+        <audio id="sound3" src="1.mp3" preload="auto"></audio>
+        <audio id="sound4" src="1.mp3" preload="auto"></audio>
       </a-assets>
       <a-marker
         id="mk1"
@@ -112,6 +112,7 @@
       <a-entity id="audio1" sound="src: #sound1" autoplay="false"></a-entity>
       <a-entity id="audio2" sound="src: #sound2" autoplay="false"></a-entity>
       <a-entity id="audio3" sound="src: #sound3" autoplay="false"></a-entity>
+      <a-entity id="audio4" sound="src: #sound4" autoplay="false"></a-entity>
       <a-entity camera></a-entity> </a-scene
     >s
 
@@ -121,27 +122,44 @@
           var entity1 = document.querySelector("#audio1");
           var entity2 = document.querySelector("#audio2");
           var entity3 = document.querySelector("#audio3");
+          var entity4 = document.querySelector("#audio4");
 
           if (document.querySelector("#mk1").object3D.visible == true) {
-            entity1.components.sound.pauseSound();
+            entity1.components.sound.playSound();
             entity2.components.sound.pauseSound();
-            entity3.components.sound.playSound();
+            entity3.components.sound.pauseSound();
+            entity4.components.sound.pauseSound();
           } else if (document.querySelector("#mk2").object3D.visible == true) {
             entity1.components.sound.pauseSound();
             entity2.components.sound.playSound();
             entity3.components.sound.pauseSound();
+            entity4.components.sound.pauseSound();
           } else if (document.querySelector("#mk3").object3D.visible == true) {
-            entity1.components.sound.playSound();
+            entity1.components.sound.pauseSound();
             entity2.components.sound.pauseSound();
-            entity3.components.sound.pauseSound();
-          } else {
+            entity3.components.sound.playSound();
+            entity4.components.sound.pauseSound();
+          } 
+          
+          else if (document.querySelector("#mk4").object3D.visible == true) {
             entity1.components.sound.pauseSound();
             entity2.components.sound.pauseSound();
             entity3.components.sound.pauseSound();
+            entity4.components.sound.playSound();
           }
+          
+          else {
+            entity1.components.sound.pauseSound();
+            entity2.components.sound.pauseSound();
+            entity3.components.sound.pauseSound();
+            entity4.components.sound.pauseSound();
+          }
+          
+          
         },
       });
     </script>
   </body>
 </html>
+
 
